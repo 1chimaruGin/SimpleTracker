@@ -117,7 +117,6 @@ def track(
     )
 
     dataset = ReadVideo(source, stride=stride)
-    vid_path, vid_writer = [None], [None]
     for i, (img, im0) in enumerate(dataset):
         det = detector.predict(img, im0)
         tracked_objects = tracker.update(detections=to_nofair(det, frameid=i))
