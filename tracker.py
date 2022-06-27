@@ -113,8 +113,6 @@ def track(
     tracker = Tracker(
         distance_function=euclidean_distance,
         distance_threshold=30,
-        hit_inertia_min=3,
-        hit_inertia_max=6,
         initialization_delay=1,
     )
 
